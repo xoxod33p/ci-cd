@@ -95,7 +95,7 @@ jobs:
               docker rm ci-cd-app || true
               docker run -d \
                 --name ci-cd-app \
-                -p 80:80 \
+                -p 3000:80 \
                 --restart unless-stopped \
                 "$IMAGE_LOWER"
             fi

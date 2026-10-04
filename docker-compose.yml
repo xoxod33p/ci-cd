@@ -3,8 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: ghcr.io/yashan223/ci-cd:latest
+    image: ghcr.io/xoxod33p/ci-cd:latest
     container_name: ci-cd-app
     restart: unless-stopped
     ports:
-      - "${PORT:-80}:80"
+      - "${PORT:-3000}:80"
