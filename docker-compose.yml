@@ -1,0 +1,10 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ghcr.io/yashan223/ci-cd:latest
+    container_name: ci-cd-app
+    restart: unless-stopped
+    ports:
+      - "${PORT:-80}:80"
