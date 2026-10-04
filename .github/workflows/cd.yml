@@ -59,6 +59,7 @@ jobs:
           port: ${{ secrets.VPS_PORT || 22 }}
           script: |
             set -e
+            export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/snap/bin
             APP_DIR="/home/deep/ci-cd"
             echo "Navigating to project directory: $APP_DIR"
             mkdir -p "$APP_DIR"
